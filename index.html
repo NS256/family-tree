@@ -4,52 +4,105 @@
         <title>Family Tree Builder</title>
         <meta charset="UTF-8">
         <link type="text/css" rel="stylesheet" href="index.css">
+        <script src="JS/script.js"></script>
     </head>
     <body>
         <div class="tree">
             <ul>
-                <li><a href="#">Grand Parent</a>
+                <li id="grand-parent"><a href="#">Grand Parent</a>
                     <ul>
                         <li>
-                            <a href="#">Parent</a>
+                            <a href="#" id="parent">Parent</a>
                             <ul>
                                 <li>
-                                    <a href="#">Child</a>
+                                    <a href="#" id="child">Child</a>
                                     <ul>
                                         <li>
-                                            <a href="#">Grand Child</a>
-                                        </li>
-                                    </ul>
-                                </li>
-                                <li>
-                                    <a href="#">Child</a>
-                                    <ul>
-                                        <li><a href="#">Grand Child</a></li>
-                                        <li>
-                                            <a href="#">Grand Child</a>
+                                            <a href="#" id="grand-child">Grand Child</a>
                                             <ul>
-                                                <li>
-                                                    <a href="#">Great Grand Child</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Great Grand Child</a>
-                                                </li>
-                                                <li>
-                                                    <a href="#">Great Grand Child</a>
-                                                </li>
+                                                <a href="#" id="grand-child">Grand Child</a>
                                             </ul>
                                         </li>
-                                        <li><a href="#">Grand Child</a></li>
+                                        <li>
+                                            <a href="#" id="child">Child</a>
+                                        </li>
                                     </ul>
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="#">Parent</a>
-                        </li>
                     </ul>
                 </li>   
             </ul>
+        </div>
+
+
+        <div id="show-edit-sidebar-button" onclick="showEditPane()">
+            <p>&#60</p>
+        </div>
+        <div id="edit-sidebar" >
+            <h2>Edit Sidebar</h2>
+                <div id="hide-button" onclick="hideEditPanel()">
+                    <p>&#62</p>
+                </div>
+            <form id="modify-record-form">
+                <label for="forename">First Name(s):</label>
+                    <br>
+                        <input type="text" id="forename">
+                            <br>
+                            <br>
+                <label for="middle-name">Middle Name(s):</label>
+                    <br>
+                        <input type="text" id="middle-name">
+                            <br>
+                            <br>
+                <label for="surname">Last Name(s):</label>
+                    <br>
+                        <input type="text" id="surname">
+                            <br>
+                            <br>
+                <label for="dob">Date of Birth:</label>
+                    <br>
+                        <input type="datetime" id="dob">
+                            <br>
+                            <br>
+                <label for="pob">Place of Birth:</label>
+                    <br>
+                        <input type="text" id="pob">
+                            <br>
+                            <br>
+                <label for="dod">Date of Death:</label>
+                    <br>
+                    <input type="datetime" id="dod">
+                        <br>
+                        <br>
+                <label for="pod">Place of Death:</label>
+                    <br>
+                        <input type="text" id="pod">
+                            <br>
+                            <br>
+                <label for="notes">Notes:</label>
+                    <br>
+                        <textarea rows="10" id="notes"></textarea>
+                            <br>
+                            <br>
+
+                
+            </form>
+            <div id="edit-buttons">
+                <button>Add Parent</button>
+                    <br>
+                <button>Add Sibling</button>
+                    <br>
+                <button>Add Partner</button>
+                    <br>
+                <button>Add Child</button>
+                    <br>
+                <button>Remove Person</button>
+                    <br>
+                <button>Save Changes</button>
+                    <br>
+                <button>Discard Changes</button>
+            </div>
         </div>
     </body>
 </html>

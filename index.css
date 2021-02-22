@@ -1,12 +1,28 @@
+body {
+    font-family: arial, verdana, tahoma;
+}
+
 /*Now the CSS*/
 * {margin: 0; padding: 0;}
 
+.tree {
+    width: 100%;
+	margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: center;
+}
+
 .tree ul {
-	padding-top: 20px; position: relative;
+	padding-top: 20px; 
+    position: relative;
 	
 	transition: all 0.5s;
 	-webkit-transition: all 0.5s;
 	-moz-transition: all 0.5s;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .tree li {
@@ -73,7 +89,6 @@ right connector from last child*/
 	padding: 5px 10px;
 	text-decoration: none;
 	color: #666;
-	font-family: arial, verdana, tahoma;
 	font-size: 11px;
 	display: inline-block;
 	
@@ -99,5 +114,83 @@ right connector from last child*/
 	border-color:  #94a0b4;
 }
 
-/*Thats all. I hope you enjoyed it.
-Thanks :)*/
+#edit-sidebar {
+	position: fixed;
+	top: 0px;
+	right: 0px;
+	width: 300px;
+	height: 100%;
+	border-left-width: 1px;
+	border-left-style: solid;
+	border-left-color: #bbbbbb;
+	display: none;
+}
+
+#edit-sidebar #hide-button {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #bbbbbb;
+	background: #f1f1f1;
+	height: 6%;
+	width: 15px;
+	position: absolute;
+	top: 47%;
+	left: -17px;
+	color: #777777;
+	text-align: center;
+	cursor: pointer;
+}
+
+#edit-sidebar #hide-button p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#show-edit-sidebar-button {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #bbbbbb;
+	background: #f1f1f1;
+	height: 6%;
+	width: 15px;
+	position: absolute;
+	top: 47%;
+	right: 0px;
+	color: #777777;
+	text-align: center;
+	cursor: pointer;
+}
+
+#show-edit-sidebar-button p {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#edit-sidebar form {
+	width: 90%;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#edit-sidebar form input, #edit-sidebar form textarea {
+	width: 100%;
+}
+
+#edit-sidebar #edit-buttons {
+	width: 100%;
+	position: absolute;
+	bottom: 5px;
+}
+
+#edit-sidebar #edit-buttons button {
+	width: 90%;
+	height: 30px;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
